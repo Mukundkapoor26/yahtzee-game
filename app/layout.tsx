@@ -7,18 +7,18 @@ const jsonLd = {
   "@type": "VideoGame",
   "name": "Yahtzee Online",
   "description": "Play the classic Yahtzee dice game online for free. Roll dice, score combinations, and compete against the computer.",
-  "url": "https://your-domain.com",
-  "image": "https://your-domain.com/og-image.jpg",
+  "url": "https://freeyahtzeegame.com",
+  "image": "https://freeyahtzeegame.com/og-image.jpg",
   "author": {
     "@type": "Person",
-    "name": "Your Name"
+    "name": "Free Yahtzee Game"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Your Name",
+    "name": "Free Yahtzee Game",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://your-domain.com/icon-512x512.png"
+      "url": "https://freeyahtzeegame.com/icon-512x512.png"
     }
   },
   "genre": "Dice Game",
@@ -34,13 +34,13 @@ const jsonLd = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://freeyahtzeegame.com'),
   title: 'Yahtzee Game - Play Classic Dice Game Online',
   description: 'Play the classic Yahtzee dice game online for free. Roll dice, score combinations, and compete against the computer. A modern web version of the beloved family dice game.',
   keywords: 'yahtzee, dice game, online game, board game, family game, multiplayer game, browser game, free game',
-  authors: [{ name: 'Your Name' }],
-  creator: 'Your Name',
-  publisher: 'Your Name',
+  authors: [{ name: 'Free Yahtzee Game' }],
+  creator: 'Free Yahtzee Game',
+  publisher: 'Free Yahtzee Game',
   robots: {
     index: true,
     follow: true,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Yahtzee Game - Play Classic Dice Game Online',
     description: 'Play the classic Yahtzee dice game online for free. Roll dice, score combinations, and compete against the computer.',
-    url: 'https://your-domain.com',
+    url: 'https://freeyahtzeegame.com',
     siteName: 'Yahtzee Online',
     images: [
       {
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: 'Yahtzee Game - Play Classic Dice Game Online',
     description: 'Play the classic Yahtzee dice game online for free. Roll dice, score combinations, and compete against the computer.',
     images: ['/twitter-image.jpg'],
-    creator: '@yourtwitterhandle',
+    creator: '@freeyahtzeegame',
   },
   category: 'game',
 }
