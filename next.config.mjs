@@ -28,6 +28,8 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  output: 'export',
+  distDir: 'out',
   async headers() {
     return [
       {
