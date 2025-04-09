@@ -1,0 +1,16 @@
+name = "yahtzee-game"
+type = "javascript"
+account_id = ""
+workers_dev = true
+compatibility_date = "2023-10-01"
+
+[build]
+command = "npm run build"
+
+[site]
+bucket = "./out"
+entry-point = "./"
+
+[env.production]
+zone_id = ""
+route = "" 
