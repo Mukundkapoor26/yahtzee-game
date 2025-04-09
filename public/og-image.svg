@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#065f46"/>
+  
+  <!-- Title -->
+  <text x="600" y="160" fill="white" font-family="Arial" font-size="72" font-weight="bold" text-anchor="middle">
+    Play Yahtzee Online
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="220" fill="#a7f3d0" font-family="Arial" font-size="36" text-anchor="middle">
+    Classic Dice Game in Your Browser
+  </text>
+  
+  <!-- Dice Group -->
+  <g transform="translate(250, 280)">
+    <!-- Dice 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="120" height="120" rx="15" fill="white" stroke="black" stroke-width="6"/>
+      <circle cx="60" cy="60" r="12" fill="black"/>
+    </g>
+    
+    <!-- Dice 2 -->
+    <g transform="translate(140, 0)">
+      <rect width="120" height="120" rx="15" fill="white" stroke="black" stroke-width="6"/>
+      <circle cx="40" cy="40" r="12" fill="black"/>
+      <circle cx="80" cy="80" r="12" fill="black"/>
+    </g>
+    
+    <!-- Dice 3 -->
+    <g transform="translate(280, 0)">
+      <rect width="120" height="120" rx="15" fill="white" stroke="black" stroke-width="6"/>
+      <circle cx="40" cy="40" r="12" fill="black"/>
+      <circle cx="60" cy="60" r="12" fill="black"/>
+      <circle cx="80" cy="80" r="12" fill="black"/>
+    </g>
+    
+    <!-- Dice 4 -->
+    <g transform="translate(420, 0)">
+      <rect width="120" height="120" rx="15" fill="white" stroke="black" stroke-width="6"/>
+      <circle cx="40" cy="40" r="12" fill="black"/>
+      <circle cx="80" cy="40" r="12" fill="black"/>
+      <circle cx="40" cy="80" r="12" fill="black"/>
+      <circle cx="80" cy="80" r="12" fill="black"/>
+    </g>
+    
+    <!-- Dice 5 -->
+    <g transform="translate(560, 0)">
+      <rect width="120" height="120" rx="15" fill="white" stroke="black" stroke-width="6"/>
+      <circle cx="40" cy="40" r="12" fill="black"/>
+      <circle cx="80" cy="40" r="12" fill="black"/>
+      <circle cx="60" cy="60" r="12" fill="black"/>
+      <circle cx="40" cy="80" r="12" fill="black"/>
+      <circle cx="80" cy="80" r="12" fill="black"/>
+    </g>
+  </g>
+  
+  <!-- Call to Action -->
+  <text x="600" y="500" fill="white" font-family="Arial" font-size="48" font-weight="bold" text-anchor="middle">
+    Play Now - Free, No Download Required
+  </text>
+</svg> 

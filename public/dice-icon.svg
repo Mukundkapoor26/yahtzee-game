@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <rect width="512" height="512" fill="#065f46"/>
+  
+  <!-- Dice -->
+  <rect x="56" y="56" width="400" height="400" rx="60" fill="white" stroke="black" stroke-width="24"/>
+  
+  <!-- Dots (5-pattern) -->
+  <circle cx="158" cy="158" r="40" fill="black"/> <!-- Top left -->
+  <circle cx="354" cy="158" r="40" fill="black"/> <!-- Top right -->
+  <circle cx="256" cy="256" r="40" fill="black"/> <!-- Center -->
+  <circle cx="158" cy="354" r="40" fill="black"/> <!-- Bottom left -->
+  <circle cx="354" cy="354" r="40" fill="black"/> <!-- Bottom right -->
+</svg> 
