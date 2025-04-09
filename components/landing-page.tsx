@@ -366,24 +366,24 @@ export default function LandingPage() {
 
       {/* Call to Action */}
       <section className="mb-12 px-4 text-center">
-        <div className="bg-gradient-to-r from-emerald-900 to-emerald-800 rounded-xl p-8 border border-emerald-700 relative overflow-hidden">
+        <div className="bg-gradient-to-r from-emerald-900 to-emerald-800 rounded-xl p-6 md:p-8 border border-emerald-700 relative overflow-hidden">
           {/* Background dice */}
           <div className="absolute inset-0 opacity-50">
-            <div className="absolute top-[20%] left-[15%] w-16 h-16 bg-white opacity-20 rounded-lg transform rotate-12"></div>
-            <div className="absolute bottom-[20%] right-[15%] w-16 h-16 bg-white opacity-20 rounded-lg transform -rotate-12"></div>
+            <div className="absolute top-[20%] left-[15%] w-12 h-12 md:w-16 md:h-16 bg-white opacity-20 rounded-lg transform rotate-12"></div>
+            <div className="absolute bottom-[20%] right-[15%] w-12 h-12 md:w-16 md:h-16 bg-white opacity-20 rounded-lg transform -rotate-12"></div>
           </div>
 
           <div className="relative z-10">
-            <h2 className="text-3xl font-bold mb-4">Ready to Play Yahtzee Online?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">Ready to Play Yahtzee Online?</h2>
+            <p className="text-base md:text-xl mb-4 md:mb-8 max-w-2xl mx-auto">
               Start playing the classic dice game for free right now - no download required!
             </p>
 
             <Button
               onClick={scrollToGame}
-              className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-6 rounded-lg text-xl"
+              className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-5 py-3 md:px-8 md:py-6 rounded-lg text-base md:text-xl"
             >
-              <Dices className="w-6 h-6 mr-2" />
+              <Dices className="w-5 h-5 md:w-6 md:h-6 mr-2" />
               Play Free Yahtzee Now
             </Button>
           </div>

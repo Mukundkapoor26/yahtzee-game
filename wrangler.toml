@@ -15,6 +15,6 @@ entry-point = "./"
 [env.production]
 name = "yahtzee-game-production"
 zone_id = ""
-route = ""
+route = "freeyahtzeegame.com/*"
 
 pages_build_output_dir = "out" 

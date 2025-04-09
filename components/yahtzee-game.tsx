@@ -510,71 +510,44 @@ export default function YahtzeeGame() {
   return (
     <div id="yahtzee-game" className="flex flex-col items-center">
       {/* Game board with wooden texture */}
-      <div className="w-full max-w-6xl bg-[url('/wood-texture.jpg')] bg-cover rounded-xl shadow-2xl p-6 mb-8">
+      <div className="w-full max-w-6xl bg-[url('/wood-texture.jpg')] bg-cover rounded-xl shadow-2xl p-3 md:p-6 mb-4 md:mb-8">
         {/* Main game layout - side by side on larger screens */}
         <div className="flex flex-col lg:flex-row lg:gap-6">
           {/* Left side - Dice and controls */}
           <div className="lg:w-1/2">
             {/* Current player and score display */}
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex justify-between items-center mb-4 md:mb-6">
               <div
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg ${
+                className={`flex items-center gap-1 md:gap-2 px-2 py-1 md:px-4 md:py-2 rounded-lg ${
                   gameMode === "single" || (gameMode === "vsComputer" && currentPlayer === "human")
                     ? "bg-blue-600 text-white"
                     : "bg-black/70 text-white"
                 }`}
               >
-                <User className="w-5 h-5 text-white" />
-                <span className="font-bold">You: {humanTotalScore}</span>
+                <User className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                <span className="text-sm md:text-base font-bold">You: {humanTotalScore}</span>
               </div>
 
-              <div className="bg-black/70 text-white px-4 py-2 rounded-lg flex items-center">
-                <span className="mr-2">Rolls left:</span>
+              <div className="bg-black/70 text-white px-2 py-1 md:px-4 md:py-2 rounded-lg flex items-center">
+                <span className="text-sm md:text-base mr-1 md:mr-2">Rolls left:</span>
                 <div className="flex space-x-1">
                   {[...Array(rollsLeft)].map((_, i) => (
-                    <div key={i} className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                    <div key={i} className="w-2 h-2 md:w-3 md:h-3 bg-yellow-400 rounded-full"></div>
                   ))}
                   {[...Array(3 - rollsLeft)].map((_, i) => (
-                    <div key={i} className="w-3 h-3 bg-gray-600 rounded-full"></div>
+                    <div key={i} className="w-2 h-2 md:w-3 md:h-3 bg-gray-600 rounded-full"></div>
                   ))}
                 </div>
               </div>
-
-              {gameMode === "vsComputer" && (
-                <div
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg ${
-                    currentPlayer === "computer" ? "bg-red-600 text-white" : "bg-black/70 text-white"
-                  }`}
-                >
-                  <span className="font-bold">CPU: {computerTotalScore}</span>
-                  <Cpu className={`w-5 h-5 ${currentPlayer === "computer" ? "text-white" : "text-gray-400"}`} />
-                </div>
-              )}
             </div>
 
-            {/* Computer message */}
-            {computerMessage && gameMode === "vsComputer" && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className={`${
-                  currentPlayer === "computer" ? "bg-red-600" : "bg-black/80"
-                } text-white p-3 rounded-lg mb-4 text-center flex items-center justify-center`}
-              >
-                {currentPlayer === "computer" && (
-                  <motion.div
-                    animate={{ rotate: [0, 360] }}
-                    transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-                    className="mr-2"
-                  >
-                    <Cpu className="w-5 h-5" />
-                  </motion.div>
-                )}
-                <span className="font-medium">{computerMessage}</span>
-              </motion.div>
+            {/* Computer thinking message */}
+            {gameMode === "vsComputer" && computerThinking && (
+              <div className="mb-4 px-4 py-2 bg-red-100/30 rounded-lg text-center">
+                <p className="text-sm md:text-base text-red-700 font-medium">{computerMessage}</p>
+              </div>
             )}
 
-            {/* Dice container */}
             <div className="relative">
               {gameMode === "vsComputer" && (
                 <>
@@ -582,9 +555,9 @@ export default function YahtzeeGame() {
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold z-10 flex items-center gap-1"
+                      className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-600 text-white px-2 py-0.5 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-bold z-10 flex items-center gap-1"
                     >
-                      <Cpu className="w-4 h-4" />
+                      <Cpu className="w-3 h-3 md:w-4 md:h-4" />
                       <span>Computer's Turn</span>
                     </motion.div>
                   )}
@@ -593,9 +566,9 @@ export default function YahtzeeGame() {
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold z-10 flex items-center gap-1"
+                      className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-2 py-0.5 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-bold z-10 flex items-center gap-1"
                     >
-                      <User className="w-4 h-4" />
+                      <User className="w-3 h-3 md:w-4 md:h-4" />
                       <span>Your Turn</span>
                     </motion.div>
                   )}
@@ -603,7 +576,7 @@ export default function YahtzeeGame() {
               )}
 
               <motion.div
-                className={`dice-container flex justify-center gap-4 mb-8 mt-4 p-4 rounded-lg ${
+                className={`dice-container flex flex-wrap justify-center gap-1 md:gap-4 mb-4 md:mb-8 mt-4 p-2 md:p-4 rounded-lg ${
                   gameMode === "vsComputer"
                     ? currentPlayer === "computer"
                       ? "bg-red-100/30"
@@ -629,7 +602,7 @@ export default function YahtzeeGame() {
             </div>
 
             {/* Roll button */}
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-4 md:mb-8">
               <Button
                 onClick={rollDice}
                 disabled={
@@ -638,7 +611,7 @@ export default function YahtzeeGame() {
                   isRolling ||
                   (gameMode === "vsComputer" && currentPlayer === "computer")
                 }
-                className={`text-lg py-6 px-8 rounded-xl shadow-lg transition-all ${
+                className={`text-base md:text-lg py-4 md:py-6 px-6 md:px-8 rounded-xl shadow-lg transition-all ${
                   rollsLeft > 0 &&
                   !gameOver &&
                   !isRolling &&
@@ -647,7 +620,7 @@ export default function YahtzeeGame() {
                     : "bg-gray-400 text-gray-700"
                 }`}
               >
-                <Dices className="w-6 h-6 mr-2" />
+                <Dices className="w-5 h-5 md:w-6 md:h-6 mr-2" />
                 Roll Dice
               </Button>
             </div>

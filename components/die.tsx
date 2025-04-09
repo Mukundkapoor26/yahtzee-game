@@ -94,7 +94,7 @@ export default function Die({ value, kept, onClick, disabled, isRolling, isCompu
 
       {/* Die SVG */}
       <motion.div
-        className={`relative w-20 h-20 md:w-24 md:h-24 ${kept ? "z-10" : ""}`}
+        className={`relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 ${kept ? "z-10" : ""}`}
         animate={kept ? { y: -10 } : { y: 0 }}
       >
         <div
