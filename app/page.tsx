@@ -3,8 +3,6 @@ import LandingPage from "@/components/landing-page"
 import GameHeader from "@/components/game-header"
 import type { Metadata } from "next"
 
-export const runtime = "edge";
-
 export const metadata: Metadata = {
   title: "Play Yahtzee Online Free | Classic Dice Game | No Download",
   description:
