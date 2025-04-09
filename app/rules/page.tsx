@@ -4,6 +4,8 @@ import GameHeader from "@/components/game-header"
 import { ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
 
+export const runtime = "edge";
+
 export const metadata: Metadata = {
   title: "Yahtzee Rules | How to Play Yahtzee | Official Game Rules",
   description:

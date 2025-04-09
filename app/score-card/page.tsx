@@ -5,6 +5,8 @@ import { Download, ArrowLeft } from "lucide-react"
 import Image from "next/image"
 import type { Metadata } from "next"
 
+export const runtime = "edge";
+
 export const metadata: Metadata = {
   title: "Yahtzee Score Card | Free Printable Yahtzee Score Sheet",
   description:
