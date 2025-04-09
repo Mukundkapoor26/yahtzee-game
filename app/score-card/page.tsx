@@ -27,14 +27,16 @@ export default function ScoreCardPage() {
       <div className="w-full max-w-4xl mx-auto text-white">
         <GameHeader />
 
-        <div className="mb-8 flex items-center justify-between">
-          <Link href="/" aria-label="Back to Yahtzee game">
-            <Button variant="secondary" className="bg-white/20 hover:bg-white/40 text-white border-white/40">
-              <ArrowLeft className="w-4 h-4 mr-2" /> Back to Game
-            </Button>
-          </Link>
-          <h1 className="text-4xl font-bold text-center text-white drop-shadow-lg">SCORE CARD</h1>
-          <div className="w-[100px]"></div> {/* Spacer for centering */}
+        <div className="mb-8 flex flex-col md:flex-row md:items-center md:justify-between">
+          <div className="mb-4 md:mb-0">
+            <Link href="/" aria-label="Back to Yahtzee game">
+              <Button variant="secondary" className="bg-white/20 hover:bg-white/40 text-white border-white/40">
+                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Game
+              </Button>
+            </Link>
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold text-center text-white drop-shadow-lg">SCORE CARD</h1>
+          <div className="hidden md:block md:w-[100px]"></div> {/* Spacer for centering on desktop only */}
         </div>
 
         {/* Hero section */}
@@ -195,22 +197,22 @@ export default function ScoreCardPage() {
 
         {/* Download Section */}
         <section className="mb-12">
-          <div className="bg-gradient-to-r from-emerald-900 to-emerald-800 rounded-xl p-8 border border-emerald-700 text-center">
-            <h2 className="text-3xl font-bold mb-4">Download Your Free Yahtzee Score Card</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">Print as many copies as you need for your next game night!</p>
+          <div className="bg-gradient-to-r from-emerald-900 to-emerald-800 rounded-xl p-4 md:p-8 border border-emerald-700 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">Download Your Free Yahtzee Score Card</h2>
+            <p className="text-base md:text-xl mb-4 md:mb-8 max-w-2xl mx-auto">Print as many copies as you need for your next game night!</p>
 
             <a
               href="/yahtzee-score-card.pdf"
               download="yahtzee-score-card.pdf"
               aria-label="Download Yahtzee score card PDF"
             >
-              <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-6 rounded-lg text-xl">
-                <Download className="w-6 h-6 mr-2" />
+              <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-4 py-3 md:px-8 md:py-6 rounded-lg text-base md:text-xl">
+                <Download className="w-5 h-5 md:w-6 md:h-6 mr-2" />
                 Download PDF Score Card
               </Button>
             </a>
 
-            <p className="mt-4 text-sm text-emerald-300">
+            <p className="mt-3 md:mt-4 text-xs md:text-sm text-emerald-300">
               PDF format • Printable on standard 8.5" x 11" paper • No registration required
             </p>
           </div>

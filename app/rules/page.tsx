@@ -26,14 +26,16 @@ export default function RulesPage() {
       <div className="w-full max-w-4xl mx-auto text-white">
         <GameHeader />
 
-        <div className="mb-8 flex items-center justify-between">
-          <Link href="/" aria-label="Back to Yahtzee game">
-            <Button variant="secondary" className="bg-white/20 hover:bg-white/40 text-white border-white/40">
-              <ArrowLeft className="w-4 h-4 mr-2" /> Back to Game
-            </Button>
-          </Link>
-          <h1 className="text-4xl font-bold text-center text-white drop-shadow-lg">RULES</h1>
-          <div className="w-[100px]"></div> {/* Spacer for centering */}
+        <div className="mb-8 flex flex-col md:flex-row md:items-center md:justify-between">
+          <div className="mb-4 md:mb-0">
+            <Link href="/" aria-label="Back to Yahtzee game">
+              <Button variant="secondary" className="bg-white/20 hover:bg-white/40 text-white border-white/40">
+                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Game
+              </Button>
+            </Link>
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold text-center text-white drop-shadow-lg">RULES</h1>
+          <div className="hidden md:block md:w-[100px]"></div> {/* Spacer for centering on desktop only */}
         </div>
 
         {/* Hero section */}
