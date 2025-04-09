@@ -13,4 +13,6 @@ entry-point = "./"
 
 [env.production]
 zone_id = ""
-route = "" 
+route = ""
+
+pages_build_output_dir = "out" 
