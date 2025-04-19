@@ -4,7 +4,7 @@ import GameHeader from "@/components/game-header"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Play Yahtzee Online Free | Classic Dice Game | No Download",
+  title: "Play Yahtzee Online for Free – No Download, Just Roll the Dice!",
   description:
     "Play Yahtzee online for free with no download required. Roll dice, score points, and challenge the computer in this classic dice game. Perfect for all ages!",
   keywords:
